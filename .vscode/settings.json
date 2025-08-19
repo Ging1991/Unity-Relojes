@@ -56,8 +56,7 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Reloj.sln",
-
+    "dotnet.defaultSolution": "RELOJ.sln",
     "[csharp]": {
         "editor.defaultFormatter": "ms-dotnettools.csharp",
         "dotnet_style_braces": "end_of_line"
