@@ -8,7 +8,7 @@ namespace Ging1991.Relojes {
 		public GestorDePeriodo segundos;
 		public GestorDePeriodo minutos;
 
-		public static string NOMBRE_RELOJ = "RelojGlobal";
+		public static string NOMBRE_RELOJ_GLOBAL = "RelojGlobal";
 
 		void Awake() {
 			decimas = new GestorDePeriodo(0.1f);
@@ -33,16 +33,16 @@ namespace Ging1991.Relojes {
 
 
 		public static Reloj GetInstanciaGlobal() {
-			GameObject relojOBJ = GameObject.Find(NOMBRE_RELOJ);
+			GameObject relojOBJ = GameObject.Find(NOMBRE_RELOJ_GLOBAL);
 
 			if (relojOBJ == null) {
-				Debug.LogWarning($"No se encontró un objeto con nombre '{NOMBRE_RELOJ}'. Asegurate de que exista si querés usar el Reloj global.");
+				Debug.LogWarning($"No se encontró un objeto con nombre '{NOMBRE_RELOJ_GLOBAL}'. Asegurate de que exista si querés usar el Reloj global.");
 				return null;
 			}
 
 			Reloj relojComponente = relojOBJ.GetComponent<Reloj>();
 			if (relojComponente == null) {
-				Debug.LogWarning($"El objeto '{NOMBRE_RELOJ}' existe pero no tiene un componente Reloj.");
+				Debug.LogWarning($"El objeto '{NOMBRE_RELOJ_GLOBAL}' existe pero no tiene un componente Reloj.");
 				return null;
 			}
 

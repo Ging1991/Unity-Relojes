@@ -1,6 +1,6 @@
 using System;
 
-namespace Ging1991.Relojes {
+namespace Ging1991.Relojes.Acciones {
 
 	public class Temporizador : IEjecutable {
 
@@ -8,7 +8,7 @@ namespace Ging1991.Relojes {
 		private readonly int limite;
 		private readonly bool repetir;
 		private int contador;
-		private Reloj reloj;
+		private readonly Reloj reloj;
 
 		public Temporizador(int limite, IEjecutable accion, bool repetir = false, Reloj reloj = null) {
 			if (accion == null)
@@ -23,6 +23,7 @@ namespace Ging1991.Relojes {
 			contador = 0;
 		}
 
+
 		public void Ejecutar() {
 			contador++;
 			if (contador == limite) {
@@ -31,12 +32,13 @@ namespace Ging1991.Relojes {
 					contador = 0;
 				else
 					if (reloj != null)
-						reloj.Desuscribir(this);
-					else
-						Reloj.GetInstanciaGlobal().Desuscribir(this);
+					reloj.Desuscribir(this);
+				else
+					Reloj.GetInstanciaGlobal().Desuscribir(this);
 			}
 		}
 
 
 	}
+
 }

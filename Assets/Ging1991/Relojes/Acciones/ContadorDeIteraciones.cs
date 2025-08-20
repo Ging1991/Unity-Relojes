@@ -1,6 +1,6 @@
 using System;
 
-namespace Ging1991.Relojes {
+namespace Ging1991.Relojes.Acciones {
 
 	public class ContadorDeIteraciones : IEjecutable {
 
@@ -14,9 +14,11 @@ namespace Ging1991.Relojes {
 			this.esRegresivo = esRegresivo;
 		}
 
+
 		public void Ejecutar() {
 			observador.ActualizarContador(esRegresivo ? --contador : ++contador);
 		}
+
 
 	}
 

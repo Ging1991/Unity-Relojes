@@ -1,4 +1,4 @@
-namespace Ging1991.Relojes {
+namespace Ging1991.Relojes.Acciones {
 
 	public interface IContadorDeIteraciones {
 

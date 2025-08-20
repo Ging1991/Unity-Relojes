@@ -1,6 +1,6 @@
 using System;
 
-namespace Ging1991.Relojes {
+namespace Ging1991.Relojes.Acciones {
 
 	public class AccionPausable : IEjecutable {
 
@@ -27,4 +27,5 @@ namespace Ging1991.Relojes {
 		}
 
 	}
+	
 }
